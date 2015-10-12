@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--color green-->
+    <color name="C_GD">#388E3C</color>
+    <color name="C_G">#4CAF50</color>
+    <color name="C_GL">#C8E6C9</color>
+    <color name="C_GML">#E8F5E9</color>
+    <!--color orange-->
+    <color name="C_OD">#F0730A</color>
+    <color name="C_O">#FF9C49</color>
+    <color name="C_OL">#FFC390</color>
+    <!--color white-->
+    <color name="C_W">#FFF</color>
+    <!--color black-->
+    <!-- 87% of #000000:  -->
+    <color name="C_B_87">#333333</color>
+    <!-- 54% of #000000: secondary   -->
+    <color name="C_B_54">#666666</color>
+    <!-- 26% of #000000: hint  -->
+    <color name="C_B_26">#999999</color>
+    <!-- 12% of #000000: dividers  -->
+    <color name="C_B_12">#1F000000</color>
+</resources>
