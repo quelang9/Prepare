@@ -51,7 +51,6 @@ public class BaseRequest<T> extends Request<T> {
         if (null == mParams) {
             mParams = new HashMap<String, String>();
         }
-        SignUtil.addSignKeyParams(mParams);
         mListener = listener;
         // set connection time out and retry times
         setRetryPolicy(new DefaultRetryPolicy(SOCKET_TIMEOUT, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));

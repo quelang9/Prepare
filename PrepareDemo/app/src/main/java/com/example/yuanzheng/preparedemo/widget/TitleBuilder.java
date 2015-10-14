@@ -8,9 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.dachu.shop.R;
-import com.dachu.shop.util.BasicUtil;
-import com.dachu.shop.util.constant.ConstantUtils;
+import com.example.yuanzheng.preparedemo.R;
+
 
 /**
  *
@@ -45,42 +44,42 @@ public class TitleBuilder {
         tvRightClear= (TextView) viewTitle.findViewById(R.id.titlebar_clear);
     }
 
-    public TitleBuilder initCommonModule(final Activity context) {
-        initNoLeftCommonModule(context).setLeftImage(R.drawable.back).setLeftText("返回").setLeftOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                context.finish();
-            }
-        });
-        return this;
-    }
+//    public TitleBuilder initCommonModule(final Activity context) {
+//        initNoLeftCommonModule(context).setLeftImage(R.drawable.back).setLeftText("返回").setLeftOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                context.finish();
+//            }
+//        });
+//        return this;
+//    }
 
-    public TitleBuilder initNoLeftCommonModule(final Activity context) {
-        setTitleBgRes(R.drawable.ab_solid_greentheme).setRightImage(R.drawable.phone).setRightText("客服")
-                .setRightOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        BasicUtil.dial(context, Uri.parse("tel:" + ConstantUtils.CUSTOMER_SERVICE_PHONE_NUMBER));
-                    }
-                });
-        return this;
-    }
-
-    public TitleBuilder initNoLeftCommonModuleAndAddClear(final Activity context,String message,OnClickListener rightClearListener) {
-        setTitleBgRes(R.drawable.ab_solid_greentheme).setRightClearText(message)
-                .setRightClearOnClickListener(rightClearListener);
-        return this;
-    }
-
-    public TitleBuilder initCommonModule(final Activity context,String message,OnClickListener rightClearListener){
-        initNoLeftCommonModuleAndAddClear(context,message,rightClearListener).setLeftImage(R.drawable.back).setLeftText("返回").setLeftOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                context.finish();
-            }
-        });
-        return this;
-    }
+//    public TitleBuilder initNoLeftCommonModule(final Activity context) {
+//        setTitleBgRes(R.drawable.ab_solid_greentheme).setRightImage(R.drawable.phone).setRightText("客服")
+//                .setRightOnClickListener(new OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        BasicUtil.dial(context, Uri.parse("tel:" + ConstantUtils.CUSTOMER_SERVICE_PHONE_NUMBER));
+//                    }
+//                });
+//        return this;
+//    }
+//
+//    public TitleBuilder initNoLeftCommonModuleAndAddClear(final Activity context,String message,OnClickListener rightClearListener) {
+//        setTitleBgRes(R.drawable.ab_solid_greentheme).setRightClearText(message)
+//                .setRightClearOnClickListener(rightClearListener);
+//        return this;
+//    }
+//
+//    public TitleBuilder initCommonModule(final Activity context,String message,OnClickListener rightClearListener){
+//        initNoLeftCommonModuleAndAddClear(context,message,rightClearListener).setLeftImage(R.drawable.back).setLeftText("返回").setLeftOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                context.finish();
+//            }
+//        });
+//        return this;
+//    }
 
 
 

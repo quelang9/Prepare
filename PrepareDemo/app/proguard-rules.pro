@@ -72,6 +72,7 @@ public static final int *;
     public *;
 }
 
+
 # -- Remove log codes --
 -assumenosideeffects class android.util.Log {
     public static *** e(...);
@@ -81,6 +82,8 @@ public static final int *;
     public static *** w(...);
     public static *** wtf(...);
 }
+
+
 
 # -- keep java bean --
 # please keep your java bean class at here

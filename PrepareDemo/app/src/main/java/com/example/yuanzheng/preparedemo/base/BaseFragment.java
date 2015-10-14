@@ -4,9 +4,9 @@ package com.example.yuanzheng.preparedemo.base;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import com.dachu.shop.event.NoEvent;
-import com.dachu.shop.util.ToastUtils;
-import com.dachu.shop.widget.CustomProgressDialog;
+
+import com.example.yuanzheng.preparedemo.utils.ToastUtils;
+import com.example.yuanzheng.preparedemo.widget.CustomProgressDialog;
 
 import de.greenrobot.event.EventBus;
 
@@ -45,8 +45,6 @@ public class BaseFragment extends Fragment {
         super.onDestroyView();
     }
 
-    public void onEventMainThread(NoEvent event) {
-    }
 
     /**
      * 描述：Toast提示文本.

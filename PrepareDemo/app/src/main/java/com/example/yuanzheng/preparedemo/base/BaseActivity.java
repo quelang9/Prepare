@@ -18,14 +18,11 @@ import android.view.WindowManager;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.Toast;
 
-import com.dachu.shop.base.AppInfo;
-import com.dachu.shop.event.NoEvent;
-import com.dachu.shop.util.activity.ExitAppUtils;
-import com.dachu.shop.util.constant.ConstantUtils;
-import com.dachu.shop.util.umeng.UmengUtil;
-import com.dachu.shop.widget.CustomProgressDialog;
+import com.example.yuanzheng.preparedemo.utils.activity.ExitAppUtils;
+import com.example.yuanzheng.preparedemo.utils.constant.ConstantUtils;
+import com.example.yuanzheng.preparedemo.utils.umeng.UmengUtil;
+import com.example.yuanzheng.preparedemo.widget.CustomProgressDialog;
 
-import cn.jpush.android.api.JPushInterface;
 import de.greenrobot.event.EventBus;
 
 
@@ -328,13 +325,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         UmengUtil.onResume(this);
-        JPushInterface.onResume(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        JPushInterface.onPause(this);
         UmengUtil.onPause(this);
     }
 
@@ -355,6 +350,4 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    public void onEventMainThread(NoEvent event) {
-    }
 }

@@ -25,7 +25,7 @@ import android.view.Gravity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.dachu.shop.R;
+import com.example.yuanzheng.preparedemo.R;
 
 
 public class CustomProgressDialog extends Dialog {

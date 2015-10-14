@@ -41,10 +41,7 @@ public class AppInfo {
     public static double latitude;
     public static double longtitude;
 
-    public static int appId = 1;
-    public static String appUid;
-
-    public static String sign_key;
+    public static String token;
 
     /**
      * 当前城市
@@ -61,7 +58,6 @@ public class AppInfo {
         dType = Build.MODEL;
         dVersion = Build.VERSION.SDK_INT + "_" + Build.VERSION.RELEASE;
         PackageInfo pi = null;
-        AppInfo.appUid = SharedPreferenceUtil.getString(mContext, "app_uid", "");
         try {
             pi = mContext.getPackageManager().getPackageInfo(mContext.getPackageName(), 0);
         } catch (Exception e) {
@@ -76,8 +72,6 @@ public class AppInfo {
         }
         appName = mContext.getString(R.string.app_name);
         initDisplay(mContext);
-
-        sign_key = SignUtil.getSignKey(mContext);
     }
 
     private static void initImei(Context mContext) {

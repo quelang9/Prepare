@@ -1,37 +1,30 @@
 package com.example.yuanzheng.preparedemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 
+import com.example.yuanzheng.preparedemo.network.protocal.RequestParamUtils;
+import com.example.yuanzheng.preparedemo.utils.logger.LogUtil;
+import com.google.gson.Gson;
+
+import org.androidannotations.annotations.EActivity;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+@EActivity(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        Map<String,String> map=new LinkedHashMap<String,String>();
+        map.put("name", "yuanzheng");
+
+        Map<String,String> mParams=RequestParamUtils.getInstance().
+                setCallParams("www.baidu.com", "1").
+                addDataJson(new Gson().toJson(map)).
+                completeFinalParams();
+        LogUtil.t("TestProtocalActivity").json(mParams.toString());
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

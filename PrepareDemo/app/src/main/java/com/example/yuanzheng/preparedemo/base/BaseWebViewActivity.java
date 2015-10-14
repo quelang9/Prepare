@@ -20,10 +20,11 @@ import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
-import com.dachu.shop.R;
-import com.dachu.shop.modules.main.MainActivity_;
-import com.dachu.shop.util.logger.LogUtil;
-import com.dachu.shop.widget.TitleBuilder;
+
+import com.example.yuanzheng.preparedemo.MainActivity;
+import com.example.yuanzheng.preparedemo.R;
+import com.example.yuanzheng.preparedemo.utils.logger.LogUtil;
+import com.example.yuanzheng.preparedemo.widget.TitleBuilder;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -55,7 +56,7 @@ public class BaseWebViewActivity extends BaseActivity {
 
     @AfterViews
     void init() {
-        mTitleBuilder = new TitleBuilder(this).setTitleText("").initCommonModule(this);
+//        mTitleBuilder = new TitleBuilder(this).setTitleText("").initCommonModule(this);
         initView();
     }
 
@@ -280,7 +281,7 @@ public class BaseWebViewActivity extends BaseActivity {
             mWebView.goBack();
             return true;
         }
-        startActivity(new Intent(getApplicationContext(), MainActivity_.class));
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
         return true;
     }

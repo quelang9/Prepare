@@ -2,7 +2,8 @@ package com.example.yuanzheng.preparedemo.utils.logger;
 
 import android.util.Log;
 
-import com.dachu.shop.util.constant.ConstantUtils;
+import com.example.yuanzheng.preparedemo.utils.constant.ConstantUtils;
+
 
 /**
  * LogUtil is a wrapper of {@link android.util.Log}

@@ -6,7 +6,7 @@ android {
             release {
                 keyAlias 'liangrenwang'
                 keyPassword KEY_PASSWORD
-                storeFile file('key/liangren')
+                storeFile file('key/liangrenwang.jks')
                 storePassword KEYSTORE_PASSWORD
             }
         }catch (ex) {
@@ -89,4 +89,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
     compile 'com.google.code.gson:gson:2.4'
+    compile 'com.umeng.analytics:analytics:latest.integration'
 }
